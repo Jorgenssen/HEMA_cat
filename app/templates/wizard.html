@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wizzard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    <div class="jumbotron">
+        <form action="#">
+            <legend>Настройки турнира</legend>
+            <div class="container">
+                <p>Список бойцов</p>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Фио</th>
+                            <th scope="col">Клуб</th>
+                            <th scope="col">Город</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Музурин Андрей Батькович</td>
+                            <td>Tramazzone</td>
+                            <td>Санкт-Петербург</td>
+                        </tr>
+                        <tr>
+                            <td>Мясищев Сергей Евгеньевич</td>
+                            <td>Tramazzone</td>
+                            <td>Санкт-Петербург</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="form-row">
+                    <div class="col-5">
+                        <input type="text" class="form-control" placeholder="Фио">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Клуб">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Город">
+                    </div>
+                    <div class="col">
+                        <input type="button" class="btn" value="Добавить">
+                    </div>
+                </div>
+                <dir class="form-row">
+                    <div class="col-6">
+                        <input type="file" class="btn" name="listUpload" id="listUpload">
+                    </div>
+                    <div class="col">
+                        <input type="button" class="btn" value="Загрузить список бойцов">
+                    </div>
+                </dir>
+            </div>    
+            <br>
+            <div class="container">
+            
+                <p>Система проведения:</p>
+                <input type="radio" name="tournamentChoice" value="swiss" id="tournamentChoice1" disabled>
+                <Label for="tournamentChoice1">Швейцарка</Label>
+                <br>
+                <input type="radio" name="tournamentChoice" value="olimpic" id="tournamentChoice2">
+                <Label for="tournamentChoice2">Олимпийка</Label>
+                <br>
+                <input type="number" name="roundTimeInput" id="roundTimeInput">
+                <label for="roundTimeInput">Максимальное время раунда</label>
+                <br>
+                <input type="number" name="roundMaxPoints" id="roundMaxPoints">
+                <label for="roundMaxPoints">Предел очков в раунде</label>
+                <br>
+                <input type="number" name="areasAmount" id="areasAmount">
+                <label for="areasAmount">Количество ристалищ</label>
+            
+            </div>
+                
+
+                
+                
+
+            
+        </form>
+    </div>
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
