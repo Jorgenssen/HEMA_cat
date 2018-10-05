@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Wizzard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="/static/wizard.js"></script>
 </head>
 <body>
     <div class="jumbotron">
@@ -21,31 +22,22 @@
                             <th scope="col">Город</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>Музурин Андрей Батькович</td>
-                            <td>Tramazzone</td>
-                            <td>Санкт-Петербург</td>
-                        </tr>
-                        <tr>
-                            <td>Мясищев Сергей Евгеньевич</td>
-                            <td>Tramazzone</td>
-                            <td>Санкт-Петербург</td>
-                        </tr>
+                    <tbody id="fighterListTable">
+                        
                     </tbody>
                 </table>
                 <div class="form-row">
                     <div class="col-5">
-                        <input type="text" class="form-control" placeholder="Фио">
+                        <input type="text" class="form-control" placeholder="Фио" id="fioInput" name="fio">
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Клуб">
+                        <input type="text" class="form-control" placeholder="Клуб" id="clubInput" name="club">
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Город">
+                        <input type="text" class="form-control" placeholder="Город" id="cityInput" name="city">
                     </div>
                     <div class="col">
-                        <input type="button" class="btn" value="Добавить">
+                        <input type="button" class="btn" value="Добавить" onclick="addFighterOnClick()">
                     </div>
                 </div>
                 <dir class="form-row">
@@ -53,7 +45,7 @@
                         <input type="file" class="btn" name="listUpload" id="listUpload">
                     </div>
                     <div class="col">
-                        <input type="button" class="btn" value="Загрузить список бойцов">
+                        <input type="button" class="btn" value="Загрузить список бойцов" onclick="uploadFightersList()">
                     </div>
                 </dir>
             </div>    
@@ -67,8 +59,8 @@
                 <input type="radio" name="tournamentChoice" value="olimpic" id="tournamentChoice2">
                 <Label for="tournamentChoice2">Олимпийка</Label>
                 <br>
-                <input type="number" name="roundTimeInput" id="roundTimeInput">
-                <label for="roundTimeInput">Максимальное время раунда</label>
+                <input type="number" name="maxRoundTime" id="maxRoundTime">
+                <label for="maxRoundTime">Максимальное время раунда</label>
                 <br>
                 <input type="number" name="roundMaxPoints" id="roundMaxPoints">
                 <label for="roundMaxPoints">Предел очков в раунде</label>

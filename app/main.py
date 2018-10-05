@@ -14,11 +14,11 @@
 from app import app
 import hashlib
 import json
-import requests
+# import requests
 #from textwrap import dedent 
 from time import time
 #from uuid import uuid4
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 from urllib.parse import urlparse
 
 #----------------------------
@@ -37,9 +37,9 @@ def admin():
 def operator():
     pass
 
-@app.route('/admin/wizard', methods = ['GET','POST'])
+@app.route('/wizard', methods = ['GET','POST'])
 def wizard():
-    pass
+    return render_template('wizard.html')
 
 @app.route('/table', methods = ['GET'])
 def table():
