@@ -113,7 +113,11 @@ function sendConfig() {
     
     fetch('http://127.0.0.1:5000/wizard', {
         method: 'POST',
-        body: configToSend
+        headers:{
+            'Accept': 'application/json, text/plain, */*',
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(configToSend)
     })
     
 }

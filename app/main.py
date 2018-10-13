@@ -40,7 +40,9 @@ def operator():
 @app.route('/wizard', methods = ['GET','POST'])
 def wizard():
     if request.method == 'POST':
-        print('test')
+        data = request.get_json()
+        
+
     else:
         return render_template('wizard.html')
 
