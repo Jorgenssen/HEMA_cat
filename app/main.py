@@ -39,7 +39,10 @@ def operator():
 
 @app.route('/wizard', methods = ['GET','POST'])
 def wizard():
-    return render_template('wizard.html')
+    if request.method == 'POST':
+        print('test')
+    else:
+        return render_template('wizard.html')
 
 @app.route('/table', methods = ['GET'])
 def table():

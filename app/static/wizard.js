@@ -88,3 +88,32 @@ function formTable() {
 
 
 }
+
+
+function sendConfig() {
+    if (document.getElementById("tournamentChoice2").checked) {
+        var tournamentType = document.getElementById("tournamentChoice2").value
+    } else {
+        var tournamentType = document.getElementById("tournamentChoice1").value
+    }
+
+    var maxRoundTime = document.getElementById("maxRoundTime").value;
+    var roundMaxPoints = document.getElementById("roundMaxPoints").value;
+    var areasAmount = document.getElementById("areasAmount").value;
+    
+    var configToSend = {
+        tournamentType: tournamentType,
+        maxRoundTime: maxRoundTime,
+        roundMaxPoints: roundMaxPoints,
+        areasAmount: areasAmount,
+        fighters: listOfFighters
+    }
+
+    console.log(configToSend);
+    
+    fetch('http://127.0.0.1:5000/wizard', {
+        method: 'POST',
+        body: configToSend
+    })
+    
+}

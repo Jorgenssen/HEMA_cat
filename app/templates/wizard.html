@@ -56,16 +56,16 @@
                 <input type="radio" name="tournamentChoice" value="swiss" id="tournamentChoice1" disabled>
                 <Label for="tournamentChoice1">Швейцарка</Label>
                 <br>
-                <input type="radio" name="tournamentChoice" value="olimpic" id="tournamentChoice2">
+                <input type="radio" name="tournamentChoice" value="olimpic" id="tournamentChoice2" checked>
                 <Label for="tournamentChoice2">Олимпийка</Label>
                 <br>
-                <input type="number" name="maxRoundTime" id="maxRoundTime">
+                <input type="number" name="maxRoundTime" id="maxRoundTime" value=120>
                 <label for="maxRoundTime">Максимальное время раунда</label>
                 <br>
-                <input type="number" name="roundMaxPoints" id="roundMaxPoints">
+                <input type="number" name="roundMaxPoints" id="roundMaxPoints" value=10>
                 <label for="roundMaxPoints">Предел очков в раунде</label>
                 <br>
-                <input type="number" name="areasAmount" id="areasAmount">
+                <input type="number" name="areasAmount" id="areasAmount" value=2>
                 <label for="areasAmount">Количество ристалищ</label>
             
             </div>
@@ -73,7 +73,7 @@
 
                 
                 
-
+            <input type="button" value="Тест" onclick="sendConfig()">
             
         </form>
     </div>
